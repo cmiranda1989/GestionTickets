@@ -1,0 +1,39 @@
+﻿@model IEnumerable<GestionTickets.Domain.Ciudad>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Region.NombreRegion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCiudad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Region.NombreRegion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCiudad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDCiudad }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDCiudad }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDCiudad })
+        </td>
+    </tr>
+}
+
+</table>

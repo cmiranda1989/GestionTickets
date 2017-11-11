@@ -1,0 +1,26 @@
+﻿@model GestionTickets.Domain.Cadena
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cadena</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCadena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCadena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDCadena }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,26 @@
+﻿@model GestionTickets.Domain.Estado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Estado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEstado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEstado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDEstado }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

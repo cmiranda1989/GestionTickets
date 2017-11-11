@@ -1,0 +1,50 @@
+﻿@model GestionTickets.Domain.Cliente
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cadena.NombreCadena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cadena.NombreCadena)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad.NombreCiudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad.NombreCiudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroLocal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDCliente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

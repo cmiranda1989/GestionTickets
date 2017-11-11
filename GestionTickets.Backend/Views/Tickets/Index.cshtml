@@ -1,0 +1,129 @@
+﻿@model IEnumerable<GestionTickets.Domain.Ticket>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CajaDepto.NombreCajaDepto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.NumeroLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Equipo.NombreEquipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado.NombreEstado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuario.Nombre1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroTicket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCreacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaCierre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Problema)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DetalleServicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Serie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActivoFijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recibe)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CajaDepto.NombreCajaDepto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.NumeroLocal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Equipo.NombreEquipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado.NombreEstado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario.Nombre1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroTicket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCreacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaCierre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Problema)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DetalleServicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Serie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActivoFijo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraEntrada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraSalida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recibe)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDTicket }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDTicket }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDTicket })
+        </td>
+    </tr>
+}
+
+</table>
